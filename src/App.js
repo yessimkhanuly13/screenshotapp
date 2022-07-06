@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { Alert } from '@mui/material';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   const API_KEY ="23e152a3a8f644c59df5a242198146b8";
@@ -37,13 +38,13 @@ const App = () => {
     <div className="App">
       <nav className='ko'>
           <form onSubmit={SearchScreenshots}>
-          <input
+          <input class="form-control input-lg" id="inputlg" type="text"
           autoFocus
-          type="text"
           value={search}
           onChange={(e)=>setSearch(e.target.value)}
           />
-          <button type='submit'>SUBMIT</button>
+          <button type='submit'
+          class="btn btn-primary">submit</button>
         </form>
       </nav>
     <div className='hero'>
@@ -59,7 +60,7 @@ const App = () => {
         <div className='loading'></div>
       ) : eror ? (
         <div className='container'>
-          <h2><Alert  severity="error">ALERT!!!!жирный рядом</Alert></h2>
+          <h2><Alert  severity="error">SALAM no valid input</Alert></h2>
         </div>
       ) : (
         ""
