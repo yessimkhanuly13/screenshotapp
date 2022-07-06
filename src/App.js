@@ -59,12 +59,13 @@ const App = () => {
         <div className='loading'></div>
       ) : eror ? (
         <div className='container'>
-          <h2><Alert  severity="error">Please a valid url</Alert></h2>
+          <h2><Alert  severity="error">ALERT!!!!жирный рядом</Alert></h2>
         </div>
       ) : (
         ""
   )}
       </div>
+      
     </div>
   );
 }
